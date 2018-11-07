@@ -50,7 +50,7 @@
             <th class='w-120px<?php echo zget($visibleFields, 'yahoo', ' hidden')?>'>   <?php echo $lang->user->yahoo;?></th>
             <th class='w-120px<?php echo zget($visibleFields, 'gtalk', ' hidden')?>'>   <?php echo $lang->user->gtalk;?></th>
             <th class='w-120px<?php echo zget($visibleFields, 'wangwang', ' hidden')?>'><?php echo $lang->user->wangwang;?></th>
-            <th class='w-120px<?php echo zget($visibleFields, 'mobile', ' hidden')?>'>  <?php echo $lang->user->mobile;?></th>
+            <th class='w-120px'>  <?php echo $lang->user->mobile;?></th>
             <th class='w-120px<?php echo zget($visibleFields, 'phone', ' hidden')?>'>   <?php echo $lang->user->phone;?></th>
             <th class='w-120px<?php echo zget($visibleFields, 'address', ' hidden')?>'> <?php echo $lang->user->address;?></th>
             <th class='w-120px<?php echo zget($visibleFields, 'zipcode', ' hidden')?>'> <?php echo $lang->user->zipcode;?></th>
@@ -85,7 +85,7 @@
           <td class='<?php echo zget($visibleFields, 'yahoo', 'hidden')?>'>   <?php echo html::input("yahoo[$i]",    '', "class='form-control' autocomplete='off'");?></td>
           <td class='<?php echo zget($visibleFields, 'gtalk', 'hidden')?>'>   <?php echo html::input("gtalk[$i]",    '', "class='form-control' autocomplete='off'");?></td>
           <td class='<?php echo zget($visibleFields, 'wangwang', 'hidden')?>'><?php echo html::input("wangwang[$i]", '', "class='form-control' autocomplete='off'");?></td>
-          <td class='<?php echo zget($visibleFields, 'mobile', 'hidden')?>'>  <?php echo html::input("mobile[$i]",   '', "class='form-control' autocomplete='off'");?></td>
+          <td>  <?php echo html::input("mobile[$i]",   '', "class='form-control' autocomplete='off'");?></td>
           <td class='<?php echo zget($visibleFields, 'phone', 'hidden')?>'>   <?php echo html::input("phone[$i]",    '', "class='form-control' autocomplete='off'");?></td>
           <td class='<?php echo zget($visibleFields, 'address', 'hidden')?>'> <?php echo html::input("address[$i]",  '', "class='form-control' autocomplete='off'");?></td>
           <td class='<?php echo zget($visibleFields, 'zipcode', 'hidden')?>'> <?php echo html::input("zipcode[$i]",  '', "class='form-control' autocomplete='off'");?></td>
