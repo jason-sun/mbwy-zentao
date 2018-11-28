@@ -7,3 +7,10 @@
 # IntelliJ IDEA Files
 *.iml
 .idea/
+
+# 禅道临时文件
+tmp/
+
+# 禅道上传文件
+www/data/upload/
+
