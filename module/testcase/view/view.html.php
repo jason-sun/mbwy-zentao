@@ -20,6 +20,9 @@
     <div class="page-title">
       <span class='label label-id'><?php echo $case->id;?></span>
       <span class='text' title='<?php echo $case->title;?>' style='color: <?php echo $case->color; ?>'><?php echo $case->title;?></span>
+      <?php if($case->fromCaseID):?>
+      <small><?php echo html::a(helper::createLink('testcase', 'view', "caseID=$case->fromCaseID"), html::icon($lang->icons['testcase']) . " {$lang->testcase->fromCase}$lang->colon$case->fromCaseID");?></small>
+      <?php endif;?>
 
       <?php if($case->deleted):?>
       <span class='label label-danger'><?php echo $lang->product->deleted;?></span>
@@ -41,6 +44,11 @@
       <?php endif; ?>
     </div>
   </div>
+  <?php if(!isonlybody()):?>
+  <div class='btn-toolbar pull-right'>
+    <?php common::printLink('testcase', 'create', "productID={$case->product}&branch={$case->branch}&moduleID={$case->module}", "<i class='icon icon-plus'></i>" . $lang->testcase->create, '', "class='btn btn-primary'"); ?>
+  </div>
+  <?php endif;?>
 </div>
 
 <div id="mainContent" class="main-row">
