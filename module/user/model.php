@@ -629,7 +629,7 @@ class userModel extends model
 
         /* Get the user first. If $password length is 32, don't add the password condition.  */
         $record = $this->dao->select('*')->from(TABLE_USER)
-            ->where('account')->eq($account)
+            ->where('mobile')->eq($account)
             ->beginIF(strlen($password) < 32)->andWhere('password')->eq(md5($password))->fi()
             ->andWhere('deleted')->eq(0)
             ->fetch();
@@ -905,7 +905,7 @@ class userModel extends model
      */
     public function checkLocked($account)
     {
-        $user = $this->dao->select('locked')->from(TABLE_USER)->where('account')->eq($account)->fetch();
+        $user = $this->dao->select('locked')->from(TABLE_USER)->where('mobile')->eq($account)->fetch();
         if(empty($user)) return false;
 
         if((strtotime(date('Y-m-d H:i:s')) - strtotime($user->locked)) > $this->config->user->lockMinutes * 60) return false;
